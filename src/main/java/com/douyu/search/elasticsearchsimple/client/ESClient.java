@@ -34,11 +34,11 @@ public class ESClient {
     private TransportClient client;
 
     private ESClient() {
+        clientProperties= SpringContextHolder.getBean("clientProperties",ClientProperties.class);
         client = new PreBuiltTransportClient(settings()).addTransportAddresses(transportAddress());
     }
 
     private TransportAddress[] transportAddress() {
-        clientProperties= SpringContextHolder.getBean("clientProperties",ClientProperties.class);
         String hostAndPorts = clientProperties.getHostAndPorts();
         Assert.notNull(hostAndPorts, "hosts is null");
         String[] hostAndPortArray = hostAndPorts.split(",");
@@ -58,7 +58,7 @@ public class ESClient {
             }
         }
         if(CollectionUtils.isEmpty(transportAddresses)){
-            throw new IllegalArgumentException("no client is available");
+            throw new IllegalArgumentException("none of nodes are available");
         }
         return Iterables.toArray(transportAddresses, TransportAddress.class);
 //        return transportAddresses.toArray(new TransportAddress[0]);
@@ -96,4 +96,5 @@ public class ESClient {
     private TransportClient getClient() {
         return this.client;
     }
+
 }

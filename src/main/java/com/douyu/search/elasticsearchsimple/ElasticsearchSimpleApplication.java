@@ -2,7 +2,9 @@ package com.douyu.search.elasticsearchsimple;
 
 import com.douyu.search.elasticsearchsimple.client.ESClient;
 import com.douyu.search.elasticsearchsimple.config.ESConfig;
+import org.elasticsearch.action.search.SearchResponse;
 import org.elasticsearch.client.transport.TransportClient;
+import org.elasticsearch.search.SearchHits;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.ImportAutoConfiguration;

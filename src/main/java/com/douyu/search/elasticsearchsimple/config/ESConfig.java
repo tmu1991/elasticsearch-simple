@@ -16,7 +16,7 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class ESConfig {
 
-    private static final String HOST_AND_PORT ="140.143.233.86:9200";
+    private static final String HOST_AND_PORT ="140.143.233.86:9300";
     private static final String CLUSTER_NAME ="my-application";
 
     private PropertiesConfigClient configClient;
