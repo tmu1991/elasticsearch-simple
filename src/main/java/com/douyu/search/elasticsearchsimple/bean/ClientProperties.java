@@ -8,7 +8,7 @@ import lombok.Setter;
  * @author xialian
  * @Title: ClientProperties
  * @ProjectName elasticsearch-simple
- * @Description: TODO
+ * @Description:
  * @date 2018/8/9 20:29
  */
 
@@ -23,6 +23,7 @@ public class ClientProperties {
     private String clientTransportNodesSamplerInterval="5S";
     private boolean clientTransportIgnoreClusterName;
     private boolean clientTransportSniff;
+    private String beanPath;
 
 
 }

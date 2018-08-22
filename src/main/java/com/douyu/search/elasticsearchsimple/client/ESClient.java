@@ -34,7 +34,7 @@ public class ESClient {
     private TransportClient client;
 
     private ESClient() {
-        clientProperties= SpringContextHolder.getBean("clientProperties",ClientProperties.class);
+        clientProperties = SpringContextHolder.getBean("clientProperties",ClientProperties.class);
         client = new PreBuiltTransportClient(settings()).addTransportAddresses(transportAddress());
     }
 

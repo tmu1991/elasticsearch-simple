@@ -11,6 +11,9 @@ import org.springframework.boot.autoconfigure.ImportAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.ComponentScan;
 
+/**
+ * @author xialian
+ */
 @SpringBootApplication
 @ComponentScan(basePackages = "com.douyu.search")
 public class ElasticsearchSimpleApplication{
